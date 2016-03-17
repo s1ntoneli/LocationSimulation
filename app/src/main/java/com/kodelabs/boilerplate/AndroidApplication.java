@@ -15,5 +15,5 @@ public class AndroidApplication extends Application {
         // initiate Timber
         Timber.plant(new DebugTree());
 
-        AVOSCloud.initialize(this, Constants.LEANCLOUD_APPID,Constants.LEANCLOUD_APPKEY); }
+        AVOSCloud.initialize(this, LeanCloudConstants.LEANCLOUD_APPID, LeanCloudConstants.LEANCLOUD_APPKEY); }
 }
