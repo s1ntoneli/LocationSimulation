@@ -2,6 +2,8 @@ package com.kodelabs.boilerplate;
 
 import android.app.Application;
 
+import com.avos.avoscloud.AVOSCloud;
+
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 
@@ -12,5 +14,6 @@ public class AndroidApplication extends Application {
 
         // initiate Timber
         Timber.plant(new DebugTree());
-    }
+
+        AVOSCloud.initialize(this, Constants.LEANCLOUD_APPID,Constants.LEANCLOUD_APPKEY); }
 }
