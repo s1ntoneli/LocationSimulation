@@ -8,5 +8,5 @@ import com.kodelabs.boilerplate.domain.repository.Repository;
 public interface CityQueryRepository extends Repository {
     String[] query(String keyword, int page, int pageSize);
     String[] queryRandom(int number);
-    String[] queryHot(int number);
+    String[] queryHot(int pageSize, int page);
 }
