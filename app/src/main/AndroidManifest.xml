@@ -14,9 +14,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.ui.activities.ResultActivity">
-        </activity>
         <activity android:name=".presentation.ui.activities.MainActivity">
+        </activity>
+        <activity android:name=".presentation.ui.activities.ResultActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

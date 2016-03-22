@@ -25,10 +25,13 @@ public class ResultPresenterImpl extends AbstractPresenter implements ResultPres
         mInteractor = new QueryInteractorImpl(ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), this, mRepository);
     }
     CityQueryRepository mRepository;
-    AbstractInteractor mInteractor;
+    QueryInteractor mInteractor;
 
     @Override
     public void resume() {
+        mInteractor.addParam("mode", ""+CityQueryRepository.MODE_HOT);
+        mInteractor.addParam("pageSize", "20");
+        mInteractor.addParam("page", "1");
         mInteractor.execute();
     }
 
