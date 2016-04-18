@@ -61,19 +61,20 @@ public class ResultPresenterImpl extends AbstractPresenter implements ResultPres
             showError("data is empty");
             return;
         }
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < data.length; i++) {
-            try {
-                AVObject object = AVObject.parseAVObject(data[i]);
-                builder.append(object.get("area_cn"));
-                builder.append(",");
-                builder.append(object.get("city"));
-                builder.append("\n");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        mView.showText(builder.toString());
+        mView.showInfo(data);
+//        StringBuilder builder = new StringBuilder();
+//        for (int i = 0; i < data.length; i++) {
+//            try {
+//                AVObject object = AVObject.parseAVObject(data[i]);
+//                builder.append(object.get("area_cn"));
+//                builder.append(",");
+//                builder.append(object.get("city"));
+//                builder.append("\n");
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        mView.showText(builder.toString());
     }
 
     @Override

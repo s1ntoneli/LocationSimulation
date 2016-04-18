@@ -9,6 +9,7 @@ import com.kodelabs.boilerplate.presentation.ui.BaseView;
 public interface ResultPresenter extends BasePresenter {
     interface View extends BaseView {
         void showText(String text);
+        void showInfo(String[] data);
     }
 
 }
